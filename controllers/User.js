@@ -95,7 +95,6 @@ router.post('/api/blogs', (req, res) => {
 
 //Delete user
 router.delete('/api/users/:id', (req, res) => {
-  console.log("Inside Delete");
   const userId = req.params.id;
 
   // Delete the user from the User table
