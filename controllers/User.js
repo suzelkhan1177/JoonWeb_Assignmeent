@@ -95,17 +95,21 @@ router.post('/api/blogs', (req, res) => {
 
 //Delete user
 router.delete('/api/users/:id', (req, res) => {
-    const userId = req.params.id;
-  
-    // Delete the user from the database
-    db.query('DELETE FROM User WHERE id = ?', userId, (error) => {
-      if (error) {
-        console.error('Error deleting user:', error);
-        res.status(500).json({ error: 'Failed to delete user' });
-      } else {
-        res.sendStatus(204);
-      }
-    });
+  console.log("Inside Delete");
+  const userId = req.params.id;
+
+  // Delete the user from the User table
+  const deleteUserQuery = 'DELETE FROM User WHERE id = ?';
+  db.query(deleteUserQuery, [userId], (err, result) => {
+    if (err) {
+      // Handle any errors
+      console.error('Error deleting user:', err);
+      res.status(500).json({ error: 'An error occurred while deleting the user' });
+    } else {
+      // User deleted successfully
+      res.json({ message: 'User deleted successfully' });
+    }
+  });
   });
   
 
