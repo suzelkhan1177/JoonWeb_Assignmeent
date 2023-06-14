@@ -184,6 +184,10 @@ router.get('/users', (req, res) => {
     });
   });
 
+  router.get('/', (req, res) => {
+    res.send('<h1>Welcome to the Suzel  API Assignment !</h1>');
+  });
+
 
 
 
