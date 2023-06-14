@@ -14,6 +14,7 @@ const db = mysql.createConnection({
     }
     console.log('Connected to the MySQL database');
   });
+  db.query('select 1 + 1', (err, rows) => { /* */ });
 
 
   const createTables = () => {
