@@ -6,7 +6,7 @@ const db = mysql.createConnection({
   user: process.env.USER,
   password: process.env.PASS,
   database: process.env.DATABASE,
-  connectionLimit: 100,
+  connectionLimit: 7 * 24 * 60 * 60 * 1000,
 });
 
 db.on('error', (err) => {
