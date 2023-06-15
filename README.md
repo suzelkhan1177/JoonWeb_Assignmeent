@@ -41,14 +41,14 @@ The API provides the following endpoints and their functionalities:
 
 ### User Endpoints
 
-- `POST /api/users`: Creates a new user.
-- `GET /api/users/:id`: Retrieves a specific user by ID.
+- `POST /api/users`: Creates a new user request name,profilepic.
+- `GET /api/users`: Retrieves a specific user by ID.
 - `PUT /api/users/:id`: Updates an existing user by ID.
 - `DELETE /api/users/:id`: Deletes a user by ID.
 
 ### Blog Endpoints
 
-- `POST /api/blogs`: Creates a new blog.
+- `POST /api/blogs`: Creates a new blog request blogcreated ,blogcontent.
 - `GET /api/blogs`: Retrieves a list of all blogs
 - `PUT /api/blogs/:id`: Updates an existing blog by ID.
 - `GET /api/users/:id/blogs`: Retrieves a list of blogs created by a specific user.
