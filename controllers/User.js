@@ -174,7 +174,7 @@ router.post('/api/users', (req, res) => {
 
 
   // get All User
-router.get('/users', (req, res) => {
+router.get('/api/users', (req, res) => {
     const sql = 'SELECT * FROM User';
     db.query(sql, (err, results) => {
       if (err) {
