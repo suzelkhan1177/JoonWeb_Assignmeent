@@ -9,7 +9,7 @@ const db = mysql.createConnection({
 });
 
 db.on('error', (err) => {
-  if (err.code === 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR' || err.code === 'PROTOCOL_CONNECTION_LOST'  ) {
+  if (err.code === 'PROTOCOL_CONNECTION_LOST' ||  err.code === 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR' ) {
     console.error('MySQLdb lost. Reconnecting...');
     handleReconnect();
   } else {
@@ -20,7 +20,7 @@ db.on('error', (err) => {
 // Establish the initialdb
 db.connect((err) => {
   if (err) {
-    console.error('Error connecting to MySQL:', err);
+    console.error('Error connecting to MySQL Line -23:', err);
 
   } else {
     console.log('Connected to MySQL server');
@@ -34,7 +34,7 @@ const handleReconnect = () => {
 
   db.connect((err) => {
     if (err) {
-      console.error('Error reconnecting to MySQL:', err);
+      console.error('Error reconnecting to MySQL Line - 37:', err);
 
     } else {
       console.log('Reconnected to MySQL server');
