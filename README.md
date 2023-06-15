@@ -52,7 +52,6 @@ The API provides the following endpoints and their functionalities:
 - `GET /api/blogs`: Retrieves a list of all blogs.
 - `GET /api/blogs/:id`: Retrieves a specific blog by ID.
 - `PUT /api/blogs/:id`: Updates an existing blog by ID.
-- `DELETE /api/blogs/:id`: Deletes a blog by ID.
 - `GET /api/users/:id/blogs`: Retrieves a list of blogs created by a specific user.
 
 ## How to Run the Project
