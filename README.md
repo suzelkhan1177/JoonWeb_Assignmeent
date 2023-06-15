@@ -48,10 +48,11 @@ The API provides the following endpoints and their functionalities:
 
 ### Blog Endpoints
 
-- `POST /api/blogs`: Creates a new blog request blogcreated ,blogcontent.
+- `POST /api/blogs`: Creates a new blog request blogcreated ,blogcontent , userId.
 - `GET /api/blogs`: Retrieves a list of all blogs
-- `PUT /api/blogs/:id`: Updates an existing blog by ID.
-- `GET /api/users/:id/blogs`: Retrieves a list of blogs created by a specific user.
+- `PUT /api/blogs/:blogid`: Updates an existing blog by ID.
+- `GET /api/users/:userid/blogs`: Retrieves a list of blogs created by a specific user.
+- `DELETE /api/blogs/blogId`: Deletes a Blog by ID.
 
 ## How to Run the Project
 
