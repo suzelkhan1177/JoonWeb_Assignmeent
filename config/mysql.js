@@ -9,7 +9,7 @@ const db = mysql.createConnection({
 });
 
 db.on('error', (err) => {
-  if (err.code === 'PROTOCOL_CONNECTION_LOST' || err.code === 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR') {
+  if (err.code === 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR' || err.code === 'PROTOCOL_CONNECTION_LOST'  ) {
     console.error('MySQLdb lost. Reconnecting...');
     handleReconnect();
   } else {
