@@ -6,10 +6,11 @@ const db = mysql.createConnection({
   user: process.env.USER,
   password: process.env.PASS,
   database: process.env.DATABASE,
+  connectionLimit: 100,
 });
 
 db.on('error', (err) => {
-  if (err.code === 'PROTOCOL_CONNECTION_LOST' ||  err.code === 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR' ) {
+  if (err.code === 'PROTOCOL_CONNECTION_LOST' ) {
     console.error('MySQLdb lost. Reconnecting...');
     handleReconnect();
   } else {
